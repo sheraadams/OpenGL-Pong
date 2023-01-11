@@ -1,3 +1,4 @@
+## Documentation 
 This game was inspired by LearnOpenGL's Breakout game. The game mechanics and physics are a bit different. The inverted rendering is used here but with different mechanics again. A pause state, AI state and fruit drop state were added for fun. A second player was added that uses AI to return the ball each time. User can select AI from the main menu to have two AI players play the game instead.  
 
 Watch the video here: https://www.youtube.com/watch?v=pD-pY-KDddw
