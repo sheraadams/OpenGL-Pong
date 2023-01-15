@@ -6,20 +6,15 @@ Watch the video here: https://www.youtube.com/watch?v=pD-pY-KDddw
 ![S3](https://user-images.githubusercontent.com/110789514/211897662-295f3fce-f186-4402-bbb7-642dbc6867e4.png)
 
 ## Images
-Wings Image by jakkapan via stock.adobe.com
 
-Background Image by hui_u via stock.adobe.com
+Gmarc. (n.d.). Animal Set in Flat Style. https://www.freepik.com/free-vector/animals-set-in-flat-style_4767470.htm
 
-Fox and Beaver Image by gmarc via Freepik.com
+Hui_u. (n.d.). colorful night sky. https://as1.ftcdn.net/v2/jpg/02/52/77/50/1000_F_252775020_qBF1RXgDQXKS7QFeu0Hd34GHLjYOWSWD.jpg
 
-## Music 
 Infraction. 2022. Boobass. Boobass. 2022.
 
-https://infractionroyaltyfreemusic.bandcamp.com/track/epic-dubstep-no-copyright-music
-https://inaudio.org/blog/what-is-royalty-free-music/
+Jakkapan (n.d.). white angel wing isolated. https://as1.ftcdn.net/v2/jpg/00/90/60/84/1000_F_90608445_4CoFVuHPIIx4oSvNE4FQ3dKf2pa3SH8M.jpg
 
-## Source Code
-JoeyDeVries. 2020. 2D Game. Learn OpenGL.com
+DeVries, J. (n.d.). LearnOpenGL/LICENSE.md at master · JoeyDeVries/LearnOpenGL. GitHub. https://github.com/JoeyDeVries/LearnOpenGL/blob/master/LICENSE.md
 
-Learn OpenGL, extensive tutorial resource for learning Modern OpenGL. (n.d.-c). https://learnopengl.com/
-https://github.com/JoeyDeVries/LearnOpenGL/blob/master/LICENSE.md
+Learn OpenGL, extensive tutorial resource for learning Modern OpenGL. (n.d.-d). https://learnopengl.com/
