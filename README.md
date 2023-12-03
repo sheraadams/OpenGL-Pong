@@ -161,7 +161,7 @@ AI controls are added in the ProcessInput function. Random fruit drops and effec
 ```
 ## Photoshop Tutorials
 
-I added a Photoshop tutorial where I design the [spaceships and other game assets](https://youtu.be/WE-DJ-A5yTY). I also added a tutorial that demonstrates how to [configure your projects in Visual Studio](https://youtu.be/ZFx30Zmo1yI).
+Here is a Photoshop tutorial where I design the [spaceships and other game assets](https://youtu.be/WE-DJ-A5yTY) and here is a tutorial that demonstrates how to [configure your projects in Visual Studio](https://youtu.be/ZFx30Zmo1yI).
 
 ## References
 
