@@ -10,6 +10,7 @@ Default game controls: Move the fox with WASD and UP, DOWN, LEFT, RIGHT. Key P w
   <p><strong>Watch the YouTube Video <a href="https://www.youtube.com/watch?v=pD-pY-KDddw" target="_blank">here</a>.</strong></p>
 </div>
 
+![pong](https://github.com/sheraadams/OpenGL-Pong/assets/110789514/bcdc5615-d29d-4187-b39a-86ee54d75615)
 
 ![S3](https://user-images.githubusercontent.com/110789514/211897662-295f3fce-f186-4402-bbb7-642dbc6867e4.png)
 
