@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="474e7908-3318-46f6-8d8f-ae6536a84a32" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../GLAD.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Images.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Music Credits.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../OPENGL32.LIB" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Opengl Collision Game.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../STB_IMAGE.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../assimp-vc140-mt.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../assimp.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ball_object.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ball_object.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build_windows.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../camera.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../filesystem.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game_level.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game_level.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game_object.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../game_object.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../glad.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../glew32s.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../glfw3.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ikpMP3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../image credits for fox.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../irrKlang.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../particle.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../particle.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../particle_generator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../particle_generator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../post_processing.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../post_processing.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../post_processor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../post_processor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../power_up.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../program.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/2.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/2.game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/2.program.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/3.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/4.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/4.game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/5.1.ball_object_collisions.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/5.1.ball_object_collisions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/5.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/5.game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/6.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/7.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/8.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/8.game.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../progress/9.game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../references.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resource_manager.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resource_manager.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/audio/bleep.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/audio/bleep.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/audio/powerup.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/audio/score.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/audio/solid.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/fonts/Antonio-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/fonts/Antonio-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/fonts/Antonio-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/fonts/OCRAEXT.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/fonts/SIL Open Font License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/levels/four.lvl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/levels/one.lvl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/levels/three.lvl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/levels/two.lvl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/awesomeface.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/block_solid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/paddle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/particle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_chaos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_confuse.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_increase.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_passthrough.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_speed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../resources/textures/powerup_sticky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../root_directory.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../shader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../shader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../sprite.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../sprite.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../sprite_renderer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../sprite_renderer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../stb_image.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../text_2d.fs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../text_2d.vs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../text_renderer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../text_renderer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../texture.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../texture.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../vc140.pdb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="3.3" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2fH6BuMKBEpDQHJG2L8TOSb0PMQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="474e7908-3318-46f6-8d8f-ae6536a84a32" name="Changes" comment="" />
+      <created>1713445523898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713445523898</updated>
+      <workItem from="1713445525020" duration="1399000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

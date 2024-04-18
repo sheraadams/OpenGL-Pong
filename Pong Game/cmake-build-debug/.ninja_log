@@ -1,0 +1,43 @@
+# ninja log v5
+463	758	1713446333207547171	CMakeFiles/sa__game.dir/src/sa/game/texture.cpp.o	4eb1fa96728e6c10
+15	141	1713446332588959503	CMakeFiles/GLAD.dir/src/glad.c.o	b594d1ed6dd6f62c
+16	681	1713446333128205001	CMakeFiles/sa__game.dir/src/sa/game/game_level.cpp.o	b278e3f3bbf7fac3
+413	736	1713446333185212468	CMakeFiles/sa__game.dir/src/sa/game/sprite_renderer.cpp.o	c484f4356e7c5fca
+16	460	1713446332907301393	CMakeFiles/sa__game.dir/src/sa/game/post_processor.cpp.o	d55702f538414fc5
+301	734	1713446333181239253	CMakeFiles/sa__game.dir/src/sa/game/shader.cpp.o	6b9f719825cebc6
+16	413	1713446332862217904	CMakeFiles/sa__game.dir/src/sa/game/game_object.cpp.o	93695797830a3c4f
+363	501	7244324880000000	GLAD.lib	16b630ea9f75b32f
+0	68	1713446353236685176	build.ninja	e75a5a3ef7781655
+0	5	0	clean	ad90e366ad70d77b
+141	178	1713446332630175000	libGLAD.a	9fcbbfa0f9b53fd0
+374	527	7244324880000000	STB_IMAGE.lib	4f81ecf27b4c86c5
+4	159	1713390819452724448	/Users/s.adams/Documents/GitHub/Space-Shooter-Game/Cross Platform Game/space shooter game/bin/sa/sa__game	919bcb91815f1e3c
+15	463	1713446332910334315	CMakeFiles/sa__game.dir/src/sa/game/ball_object.cpp.o	92bda1b0da13ee0c
+4	327	1713446348790562214	CMakeFiles/sa__game.dir/src/sa/game/text_renderer.cpp.o	1d724138e768c5f8
+178	757	1713446333205946627	CMakeFiles/sa__game.dir/src/sa/game/resource_manager.cpp.o	af83edf129ced072
+16	518	1713446332963064817	CMakeFiles/sa__game.dir/src/sa/game/particle_generator.cpp.o	9fed952693ae6034
+263	301	1713446332752360000	libSTB_IMAGE.a	487b5a6d3c68d358
+16	692	1713446333139538977	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+16	559	1713446333006388970	CMakeFiles/sa__game.dir/src/sa/game/program.cpp.o	c6f14cfe38517fef
+584	735	1704652433915887412	/Users/s.adams/Library/Mobile Documents/com~apple~CloudDocs/repos/cmake mac work/imgui/bin/sa/sa__app	f417ca4ab436f71a
+15	263	1713446332712554787	CMakeFiles/STB_IMAGE.dir/src/stb_image.cpp.o	c82b7b4182a77b8c
+1356	1557	1713302999231936822	/Users/s.adams/Library/CloudStorage/OneDrive-Personal/space shooter cmake copy/bin/sa/sa__game	331019c0b084f46d
+4	448	1713446555457612966	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+448	567	1713446555545874483	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
+5	392	1713446566678044826	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+392	497	1713446566754656450	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
+4	412	1713446587119892161	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+412	534	1713446587210225348	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
+6	428	1713446853657870712	CMakeFiles/sa__game.dir/src/sa/game/ball_object.cpp.o	92bda1b0da13ee0c
+9	440	1713446853672995987	CMakeFiles/sa__game.dir/src/sa/game/game_object.cpp.o	93695797830a3c4f
+16	465	1713446853695314314	CMakeFiles/sa__game.dir/src/sa/game/shader.cpp.o	6b9f719825cebc6
+10	525	1713446853755818453	CMakeFiles/sa__game.dir/src/sa/game/particle_generator.cpp.o	9fed952693ae6034
+13	529	1713446853760976545	CMakeFiles/sa__game.dir/src/sa/game/program.cpp.o	c6f14cfe38517fef
+12	550	1713446853781959454	CMakeFiles/sa__game.dir/src/sa/game/post_processor.cpp.o	d55702f538414fc5
+15	625	1713446853855446572	CMakeFiles/sa__game.dir/src/sa/game/resource_manager.cpp.o	af83edf129ced072
+6	676	1713446853907632323	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+8	692	1713446853923045389	CMakeFiles/sa__game.dir/src/sa/game/game_level.cpp.o	b278e3f3bbf7fac3
+465	722	1713446853955251983	CMakeFiles/sa__game.dir/src/sa/game/texture.cpp.o	4eb1fa96728e6c10
+430	750	1713446853983249736	CMakeFiles/sa__game.dir/src/sa/game/sprite_renderer.cpp.o	c484f4356e7c5fca
+440	892	1713446854124976381	CMakeFiles/sa__game.dir/src/sa/game/text_renderer.cpp.o	1d724138e768c5f8
+893	1008	1713446854209585809	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
