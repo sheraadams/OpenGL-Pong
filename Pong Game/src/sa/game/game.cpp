@@ -31,11 +31,10 @@ GameObject        *Fruit5;
 BallObject        *Ball;
 ParticleGenerator *Particles;
 PostProcessor     *Effects;
-
+TextRenderer      *Text;
 #ifndef __APPLE__
 ISoundEngine      *SoundEngine = createIrrKlangDevice();
 #endif
-TextRenderer      *Text;
 
 float ShakeTime = 0.0f;
 int points;
@@ -52,12 +51,12 @@ Game::~Game()
     delete Renderer;
     delete Player;
     delete Player2;
+    delete Pause;
     delete Fruit;
     delete Fruit2;
     delete Fruit3;
     delete Fruit4;
     delete Fruit5;
-    delete Pause;
     delete Ball;
     delete Particles;
     delete Effects;
@@ -82,6 +81,7 @@ void Game::Init()
     ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
     ResourceManager::GetShader("particle").Use().SetInteger("sprite", 0);
     ResourceManager::GetShader("particle").SetMatrix4("projection", projection);
+
     // load textures
     ResourceManager::LoadTexture("resources/textures/background3.jpg", false, "background");
     ResourceManager::LoadTexture("resources/textures/awesomeface2.png", true, "face");
@@ -97,12 +97,14 @@ void Game::Init()
     ResourceManager::LoadTexture("resources/textures/powerup_chaos3.png", true, "powerup_chaos");
     ResourceManager::LoadTexture("resources/textures/powerup_passthrough3.png", true, "powerup_passthrough");
     ResourceManager::LoadTexture("resources/textures/pause.png", true, "pause");
+
     // set render-specific controls
     Renderer = new SpriteRenderer(ResourceManager::GetShader("sprite"));
     Particles = new ParticleGenerator(ResourceManager::GetShader("particle"), ResourceManager::GetTexture("particle"), 500);
     Effects = new PostProcessor(ResourceManager::GetShader("postprocessing"), this->Width, this->Height);
     Text = new TextRenderer(this->Width, this->Height);
     Text->Load("resources/fonts/OCRAEXT.TTF", 24);
+
     // load levels
     GameLevel one; one.Load("resources/levels/one.lvl", this->Width, this->Height / 2);
     GameLevel two; two.Load("resources/levels/two.lvl", this->Width, this->Height /2 );
@@ -134,7 +136,7 @@ void Game::Init()
     glm::vec2 Fruit5Pos = glm::vec2(this->Width - FRUIT_SIZE.x * 3, this->Height / 10.0f - FRUIT_SIZE.y);
     Fruit5 = new GameObject(Fruit5Pos, FRUIT_SIZE, ResourceManager::GetTexture("powerup_sticky"));
 
-    // pause buttom
+    // pause button
     glm::vec2 PausePos = glm::vec2(this->Width / 2.0f - 200, this->Height / 2.0f - 170);
     Pause = new GameObject(PausePos, PAUSE_SIZE, ResourceManager::GetTexture("pause"));
   
@@ -147,7 +149,6 @@ void Game::Init()
 
 void Game::Update(float dt)
 {
-
     int points = this->Points;
     // update objects
     Ball->Move(dt, this->Width);
@@ -214,15 +215,12 @@ void Game::Update(float dt)
         Effects->Chaos = true;
         this->State = GAME_LOSE;
     }
-
 }
-
 
 void Game::ProcessInput(float dt)
 {
     float velocity = PLAYER_VELOCITY * dt;
-    bool aiPlayer = false;
-
+    int pausepoints = points;
 
     if (this->State == GAME_MENU)
     {
@@ -232,11 +230,9 @@ void Game::ProcessInput(float dt)
             this->KeysProcessed[GLFW_KEY_ENTER] = true;
         }
         // choose whether or not to play game or have 2 ai players
-
         if (this->Keys[GLFW_KEY_A] && !this->KeysProcessed[GLFW_KEY_A])
         {
             this->State = GAME_AI;
-            aiPlayer = true;
             this->KeysProcessed[GLFW_KEY_S] = true;
         }
     }
@@ -246,7 +242,6 @@ void Game::ProcessInput(float dt)
         {
             this->KeysProcessed[GLFW_KEY_ENTER] = true;
             Effects->Chaos = false;
-
 
             this->State = GAME_MENU;
             points = 0;
@@ -260,7 +255,6 @@ void Game::ProcessInput(float dt)
             this->KeysProcessed[GLFW_KEY_ENTER] = true;
             Effects->Chaos = false;
 
-
             this->State = GAME_MENU;
             points = 0;
             points2 = 0;
@@ -268,10 +262,8 @@ void Game::ProcessInput(float dt)
     }
     if (this->State == GAME_AI)
     {
-        
         if (this->Keys[GLFW_KEY_P] && !this->KeysProcessed[GLFW_KEY_P])
         {
-            int pausepoints = points;
             points = pausepoints;
             this->State = GAME_PAUSE;
             this->KeysProcessed[GLFW_KEY_P] = true;
@@ -285,14 +277,12 @@ void Game::ProcessInput(float dt)
         if (keycounter > 880) { Effects->Shake = false; }
 
         Ball->Stuck = false;
-        float velocity = PLAYER_VELOCITY * dt;
         if (Player->Position.y <= Ball->Position.y)
         {
             keycounter += 1;
             Player->Position.y += velocity;
 
             // keep player 2 in the upper bounds of the screen
-
             if (Player->Position.y >= this->Height - Player->Size.y)
             {
                 Player->Position.y = this->Height - Player->Size.y;
@@ -311,11 +301,9 @@ void Game::ProcessInput(float dt)
         // AI player 2 is auto
         if (Player2->Position.y <= Ball->Position.y)
         {
-
             Player2->Position.y += velocity;
 
             // keep player 2 in the upper bounds of the screen
-
             if (Player2->Position.y >= this->Height - Player2->Size.y)
             {
                 Player2->Position.y = this->Height - Player2->Size.y;
@@ -329,18 +317,16 @@ void Game::ProcessInput(float dt)
                 Player2->Position.y = 0;
             }
             Player2->Position.y -= velocity;
-
         }
         // AI player 2 vertical
-
         if (this->Keys[GLFW_KEY_SPACE])
             Ball->Stuck = false;
 
         // fruit drops
-        Fruit->Position.y += velocity / 2.0f;
-        Fruit2->Position.y += velocity / 1.1f;
+        Fruit->Position.y += velocity / 1.0f;
+        Fruit2->Position.y += velocity / 2.0f;
         Fruit3->Position.y += velocity / 3.0f;
-        Fruit4->Position.y += velocity;
+        Fruit4->Position.y += velocity / 4.0f;
         Fruit5->Position.y += velocity;
 
     }
@@ -348,7 +334,6 @@ void Game::ProcessInput(float dt)
     {
         if (this->Keys[GLFW_KEY_P] && !this->KeysProcessed[GLFW_KEY_P])
         {
-            int pausepoints = points;
             points = pausepoints;
             this->State = GAME_PAUSE;
             this->KeysProcessed[GLFW_KEY_P] = true;
@@ -385,93 +370,39 @@ void Game::ProcessInput(float dt)
         Fruit5->Position.y += velocity;
 
         // move playerboard
-        if (this->Keys[GLFW_KEY_A])
+        if ((this->Keys[GLFW_KEY_A]) || (this->Keys[GLFW_KEY_LEFT]))
         {
-
-            if (Player->Position.x >= 0.0f)
-            {
-
-                Player->Position.x -= velocity;
-                if (Player->Position.x <= 0)
-                    Player->Position.x = 0;
-
-                if (Ball->Stuck)
-                    Ball->Position.x -= velocity;
-            }
-        }
-
-        if (this->Keys[GLFW_KEY_D])
-        {
-
-            if (Player->Position.x <= this->Width - Player->Size.x)
-            {
-                Player->Position.x += velocity;
-                if (Ball->Stuck)
-                    Ball->Position.x += velocity;
-            }
-        }
-        // add additional left right option 
-        if (this->Keys[GLFW_KEY_LEFT])
-        {
-
             if (Player->Position.x >= 0.0f)
             {
                 Player->Position.x -= velocity;
-                // keep in screen bound left
                 if (Player->Position.x <= 0)
                     Player->Position.x = 0;
-                if (Ball->Stuck)
-                    Ball->Position.x -= velocity;
             }
         }
-        if (this->Keys[GLFW_KEY_RIGHT])
-        {
 
+        if ((this->Keys[GLFW_KEY_D]) || (this->Keys[GLFW_KEY_RIGHT]))
+        {
             if (Player->Position.x <= this->Width - Player->Size.x)
             {
                 Player->Position.x += velocity;
-                if (Ball->Stuck)
-                    Ball->Position.x += velocity;
+
             }
         }
-        if (this->Keys[GLFW_KEY_UP])
+
+        if ((this->Keys[GLFW_KEY_W]) || (this->Keys[GLFW_KEY_UP]))
         {
             keycounter += 1;
             if (Player->Position.y >= 0.0f)
             {
                 Player->Position.y -= velocity;
-                if (Ball->Stuck)
-                    Ball->Position.y -= velocity;
             }
         }
-        if (this->Keys[GLFW_KEY_W])
-        {
-            keycounter += 1;
-            if (Player->Position.y >= 0.0f)
-            {
-                Player->Position.y -= velocity;
-                if (Ball->Stuck)
-                    Ball->Position.y -= velocity;
-            }
-        }
-        if (this->Keys[GLFW_KEY_DOWN])
+        if ((this->Keys[GLFW_KEY_S]) || (this->Keys[GLFW_KEY_DOWN]))
         {
             keycounter += 1;
             if (Player->Position.y <= this->Height - Player->Size.y)
             {
                 Player->Position.y += velocity;
-                if (Ball->Stuck)
-                    Ball->Position.y += velocity;
-            }
-        }
-        if (this->Keys[GLFW_KEY_S])
-        {
-            keycounter += 1;
-            if (Player->Position.y <= this->Height - Player->Size.y)
-            {
-                Player->Position.y += velocity;
-                if (Ball->Stuck)
-                    Ball->Position.y += velocity;
             }
         }
 
@@ -480,7 +411,6 @@ void Game::ProcessInput(float dt)
         {
             keycounter += 1;
             Player2->Position.y += velocity;
-
 
             // keep player 2 in the upper bounds of the screen
             if (Player2->Position.y >= this->Height - Player2->Size.y)
@@ -496,10 +426,7 @@ void Game::ProcessInput(float dt)
                 Player2->Position.y = 0;
             }
             Player2->Position.y -= velocity;
-
         }
-            // AI player 2 vertical
-        
         if (this->Keys[GLFW_KEY_SPACE])
             Ball->Stuck = false;
     }
@@ -507,7 +434,6 @@ void Game::ProcessInput(float dt)
     {
         if (this->Keys[GLFW_KEY_P] && !this->KeysProcessed[GLFW_KEY_P])
         {
-            int pausepoints = points;
             points = pausepoints;
             this->State = GAME_ACTIVE;
             this->KeysProcessed[GLFW_KEY_P] = true;
@@ -517,7 +443,6 @@ void Game::ProcessInput(float dt)
 
 void Game::Render()
 {
-
     if (this->State == GAME_ACTIVE || this->State == GAME_MENU || this->State == GAME_WIN || this->State == GAME_AI || this->State == GAME_LOSE || this->State== GAME_PAUSE)
     {
         // begin rendering to postprocessing framebuffer
@@ -531,7 +456,6 @@ void Game::Render()
 
             Player->Draw(*Renderer);
             Player2->Draw(*Renderer);
-
 
             // draw PowerUps
             for (PowerUp &powerUp : this->PowerUps)
@@ -552,7 +476,6 @@ void Game::Render()
         // player 2 points
         std::stringstream pp; pp << points2;
 
-  
         // player 1 points
         Text->RenderText("Player 1:" + sp.str(), 5.0f, 5.0f, 1.0f);
         // player 2 points
@@ -600,7 +523,6 @@ void Game::ResetLevel()
         this->Levels[2].Load("levels/three.lvl", this->Width, this->Height / 2);
     else if (this->Level == 3)
         this->Levels[3].Load("levels/four.lvl", this->Width, this->Height / 2);
-
 }
 
 void Game::ResetPlayer()
@@ -623,7 +545,6 @@ void Game::ResetPlayer()
     Player2->Color = glm::vec3(1.0f);
     Ball->Color = glm::vec3(1.0f);
 }
-
 
 // powerups
 bool IsOtherPowerUpActive(std::vector<PowerUp> &powerUps, std::string type);
@@ -686,7 +607,6 @@ void Game::UpdatePowerUps(float dt)
 glm::vec2 ShouldSpawn(unsigned int chance)
 {
     int randx = chance * rand() % 5;
-    int randy = chance * rand() % 5;
     float a = randx * 1.0f;
     glm::vec2 ball2(a, a);
     return ball2;
@@ -697,7 +617,6 @@ void Game::SpawnPowerUps(glm::vec2 ball)
     if (points > 1000)
     {
         int randx = chance * rand() % 5;
-        int randy = chance * rand() % 5;
         float a = randx * 1.0f;
         glm::vec2 ball2(a, a);
         this->PowerUps.push_back(PowerUp("sticky", glm::vec3(0.0f, 0.5f, 0.0f), 20.0f, ball2, ResourceManager::GetTexture("powerup_sticky"))); // pear
@@ -707,7 +626,6 @@ void Game::SpawnPowerUps(glm::vec2 ball)
 
     {
         int randx = chance * rand() % 5;
-        int randy = chance * rand() % 5;
         float a = randx * 1.0f;
         glm::vec2 ball2(a, a);
         this->PowerUps.push_back(PowerUp("speed", glm::vec3(1.5f, 1.5f, 0.0f), 0.0f, ball2, ResourceManager::GetTexture("powerup_speed"))); // banana
@@ -716,7 +634,6 @@ void Game::SpawnPowerUps(glm::vec2 ball)
 
     {
         int randx = chance * rand() % 5;
-        int randy = chance * rand() % 5;
         float a = randx * 1.0f;
         glm::vec2 ball2(a, a);
         this->PowerUps.push_back(PowerUp("pass-through", glm::vec3(1.0f, .50f, 0.0f), 10.0f, ball2, ResourceManager::GetTexture("powerup_passthrough"))); // orange
@@ -725,7 +642,6 @@ void Game::SpawnPowerUps(glm::vec2 ball)
 
     {
         int randx = chance * rand() % 5;
-        int randy = chance * rand() % 5;
         float a = randx * 1.0f;
         glm::vec2 ball2(a, a);
         this->PowerUps.push_back(PowerUp("pad-size-increase", glm::vec3(1.5f, 1.5f, 0.0), 0.0f, ball2, ResourceManager::GetTexture("powerup_increase"))); // lemon
@@ -734,13 +650,11 @@ void Game::SpawnPowerUps(glm::vec2 ball)
 
     {
         int randx = chance * rand() % 5;
-        int randy = chance * rand() % 5;
         float a = randx * 1.0f;
         glm::vec2 ball2(a, a);
         this->PowerUps.push_back(PowerUp("confuse", glm::vec3(0.64f, 0.0f, 1.0f), 15.0f, ball2, ResourceManager::GetTexture("powerup_confuse"))); // grape
         PowerUps.push_back(PowerUp("chaos", glm::vec3(0.9f, 0.0f, 0.0f), 15.0f, ball2, ResourceManager::GetTexture("powerup_chaos"))); // cherry
     }
-
 }
 
 void ActivatePowerUp(PowerUp &powerUp)
@@ -797,20 +711,13 @@ Direction VectorDirection(glm::vec2 closest);
 
 void Game::DoCollisions()
 {
-
     // also check collisions on PowerUps and if so, activate them
     for (PowerUp &powerUp : this->PowerUps)
     {
         if (!powerUp.Destroyed)
         {
-            // first check if powerup passed bottom edge, if so: keep as inactive and destroy
-            if (powerUp.Position.y >= this->Height)
-            {
-                //powerUp.Destroyed = true;
-
-            }
             if (CheckCollision(*Player, powerUp))
-            {	// collided with player, now activate powerup
+            {	// collided with player, now activate power up
                 ActivatePowerUp(powerUp);
                 powerUp.Destroyed = true;
                 powerUp.Activated = true;
@@ -894,7 +801,7 @@ Collision CheckCollision(BallObject &one, GameObject &two) // AABB - Circle coll
     glm::vec2 difference = center - aabb_center;
     glm::vec2 clamped = glm::clamp(difference, -aabb_half_extents, aabb_half_extents);
 
-    // now that we know the the clamped values, add this to AABB_center and we get the value of box closest to circle
+    // now that we know the clamped values, add this to AABB_center and we get the value of box closest to circle
     glm::vec2 closest = aabb_center + clamped;
 
     // now retrieve vector between center circle and closest point AABB and check if length < radius
@@ -906,7 +813,7 @@ Collision CheckCollision(BallObject &one, GameObject &two) // AABB - Circle coll
         return std::make_tuple(false, UP, glm::vec2(0.0f, 0.0f));
 }
 
-// calculates which direction a vector is facing (N,E,S or W)
+// calculates which direction  the vector is facing
 Direction VectorDirection(glm::vec2 target)
 {
     glm::vec2 compass[] = {

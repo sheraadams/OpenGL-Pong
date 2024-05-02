@@ -41,3 +41,5 @@
 430	750	1713446853983249736	CMakeFiles/sa__game.dir/src/sa/game/sprite_renderer.cpp.o	c484f4356e7c5fca
 440	892	1713446854124976381	CMakeFiles/sa__game.dir/src/sa/game/text_renderer.cpp.o	1d724138e768c5f8
 893	1008	1713446854209585809	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
+5	1753	1714653042268139411	CMakeFiles/sa__game.dir/src/sa/game/game.cpp.o	97fb1115a3a0d720
+1757	2040	1714653043477997088	/Users/s.adams/Documents/GitHub/OpenGL-Pong/Pong Game/bin/sa/sa__game	283d11022b7f133b
