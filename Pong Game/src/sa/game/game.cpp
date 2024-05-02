@@ -703,7 +703,6 @@ bool IsOtherPowerUpActive(std::vector<PowerUp> &powerUps, std::string type)
     return false;
 }
 
-
 // collision detection
 bool CheckCollision(GameObject &one, GameObject &two);
 Collision CheckCollision(BallObject &one, GameObject &two);
@@ -750,8 +749,6 @@ void Game::DoCollisions()
         SoundEngine->play2D("resources/audio/bleep.wav", false);
 #endif
     }
-
-
 
     Collision result2 = CheckCollision(*Ball, *Player2);
     if (!Ball->Stuck && std::get<0>(result2))
