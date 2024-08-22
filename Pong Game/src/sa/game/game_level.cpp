@@ -7,10 +7,8 @@
 ** option) any later version.
 ******************************************************************/
 #include "game_level.h"
-
 #include <fstream>
 #include <sstream>
-
 
 void GameLevel::Load(const char *file, unsigned int levelWidth, unsigned int levelHeight)
 {
@@ -43,8 +41,6 @@ void GameLevel::Draw(SpriteRenderer &renderer)
         if (!tile.Destroyed)
             tile.Draw(renderer);
 }
-
-
 
 void GameLevel::init(std::vector<std::vector<unsigned int>> tileData, unsigned int levelWidth, unsigned int levelHeight)
 {
