@@ -183,6 +183,11 @@ cmake -G Xcode ..
 
 Check out my [references here](https://github.com/sheraadams/OpenGL-Pong/edit/main/references.md).
 
+### License:
+- The code is based on the Breakout game by Nolan Bushnell and Steve Bristow (Atari).
+- The tutorial code is © Joey DeVries and licensed under the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+- Modifications and additional contributions are © Shera Adams and licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+
 <div style="text-align: center;">
   <p><strong>Proudly crafted with ❤️ by <a href="https://github.com/sheraadams" target="_blank">Shera Adams</a>.</strong></p>
 </div>
